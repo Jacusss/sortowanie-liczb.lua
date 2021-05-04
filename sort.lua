@@ -1,27 +1,19 @@
-print("podaj liczbê nm 1")
-  l1 = io.read( )
-print("podaj liczbê nm 2")
-  l2 = io.read( )
-print("podaj liczbê nm 3")
-  l3 = io.read( )
-print("podaj liczbê nm 4")
-  l4 = io.read( )
-print("podaj liczbê nm 5")
-  l5 = io.read( )
-print("podaj liczbê nm 6")
-  l6 = io.read( )
-print("podaj liczbê nm 7")
-  l7 = io.read( )
-print("podaj liczbê nm 8")
-  l8 = io.read( )
-print("podaj liczbê nm 9")
-  l9 = io.read( )
-print("podaj liczbê nm 10")
-  l0 = io.read( )
+print("podaj ilosc liczb :")
+  b = io.read( )             --podawanie ilosci liczb
+local n={b}
 
-n = {l1,l2,l3,l4,l5,l6,l7,l8,l9,l0}
+a=0
+for i=1,b,1 do
+print("podaj liczbe :")
+  n[a+i] = io.read( )
+end  -- wpisywanie do tabeli
 
-local function sort(t, nsort)
+
+for i=1,b,1 do
+print(n[0+i])  --wypisywanie tabeli
+end
+
+local function sort(t, nsort) -- sortowanie
   local count = #n
     for j = 1, count -1 do
       for i = 1, count - 1 do
@@ -34,11 +26,12 @@ local function sort(t, nsort)
     end
   end
 end
+
 local function tabela(t)
-  for k, v in pairs(t) do
+  for k, v in pairs(t) do   --funkcja wypisywania tabeli rosnaco
     print(v)
   end
 end
-print("posortowane rosn¹co:")
+print("posortowane rosnaco:")  
 sort(n, true)
-tabela(n)
+tabela(n)           -- wywoÅ‚anie funkcji
