@@ -1,29 +1,17 @@
 print("podaj ilosc liczb :")
-b = io.read( )             --podawanie ilosci liczb
-
+  b = io.read( )                     --podawanie ilosci liczb
 local n={b}
 
-for i=0,b-1,1 do
-  print("podaj liczbe :")
-  n[i] = io.read( )
-end  -- wpisywanie do tabeli
+a=0
+for i=1,b,1 do
+print("podaj liczbe :")
+  n[a+i] = io.read( )               -- wpisywanie do tabeli
+end 
 
 print("tabela nieposortowana :")
-for i=0,b-1,1 do
-  print(n[i])  --wywolanie tabeli
+for i=1,b,1 do
+print(n[0+i])                       --wywolanie tabeli nieposortowana  
 end
-
-function sort(n)
-  for i=0,b-1,1 do
-    for j=0, j <b-1 do
-      if n[j] > n[j+1]     then
-        temp = n[j]
-        n[j] = n[j+1]
-        n[j+1] = temp
-      end
-    end
-  end
-end
-
-print(sort(n))
-
+io.write("tabela posortowana :\n")
+table.sort(n)                       --sortowanie
+table.foreach(n, print)             --wywolanie tabeli posortowanej
