@@ -8,9 +8,9 @@ print("podaj liczbe :")
   n[a+i] = io.read( )
 end  -- wpisywanie do tabeli
 
-
+print("tabela nieposortowana :")
 for i=1,b,1 do
-print(n[0+i])  --wypisywanie tabeli
+print(n[0+i])  --wywolanie tabeli
 end
 
 local function sort(t, nsort) -- sortowanie
